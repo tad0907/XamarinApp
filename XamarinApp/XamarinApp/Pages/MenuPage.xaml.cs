@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinApp.Objects;
+using XamarinApp.Pages.CorouselPages;
 
 namespace XamarinApp.Pages
 {
@@ -19,10 +20,21 @@ namespace XamarinApp.Pages
 
             var dtos = new List<MenuDto>();
 
-            dtos.Add(new MenuDto("AAAAA", "aaaaaaaa", "mail.png"));
-            dtos.Add(new MenuDto("BBBBB", "bbbbbbbcccccccccccccccc", "mail.png"));
+            dtos.Add(new MenuDto("CarouselMainPage",
+                "カーセルページ：左右にスワイプしてページを移動する。", "Carousel.png"));
 
             MyListView.ItemsSource = dtos;
+        }
+
+        private void MyListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var item = e.Item as MenuDto;
+            //DisplayAlert(item.Title, item.SubTitle, "OK");
+
+            if(item.Title == "CarouselMainPage")
+            {
+                Navigation.PushAsync(new CarouselMainPage());
+            }
         }
     }
 }

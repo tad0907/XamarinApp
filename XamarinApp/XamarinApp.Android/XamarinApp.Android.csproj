@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Carousel.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinApp\XamarinApp.csproj">
       <Project>{C1A7E522-8C66-4D56-A85D-A0EE3B039AC4}</Project>
@@ -93,7 +95,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mail.png" />
+    <AndroidResource Include="Resources\drawable\Mail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
