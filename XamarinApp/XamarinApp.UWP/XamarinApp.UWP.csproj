@@ -132,6 +132,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <AndroidResource Include="Carousel.png" />
     <Content Include="Mail.png" />
+    <AndroidResource Include="MessageBox.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
