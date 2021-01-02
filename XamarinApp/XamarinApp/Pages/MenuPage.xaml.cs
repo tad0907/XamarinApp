@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinApp.Objects;
 using XamarinApp.Pages.CorouselPages;
+using XamarinApp.Pages.DisplayActionSheetPages;
 using XamarinApp.Pages.MessageBoxPages;
 
 namespace XamarinApp.Pages
@@ -22,9 +23,11 @@ namespace XamarinApp.Pages
             var dtos = new List<MenuDto>();
 
             dtos.Add(new MenuDto("CarouselMainPage",
-                "カルーセル：左右にスワイプしてページを移動する。", "Carousel.png"));
+                "左右にスワイプしてページを移動する。", "Carousel.png"));
             dtos.Add(new MenuDto("MessageBoxPage",
-                "メッセージボックス：メッセージを表示する。", "MessageBox.png"));
+                "メッセージを表示する。", "MessageBox.png"));
+            dtos.Add(new MenuDto("DisplayActionSheetPage",
+                "選択リストから選べる問い合わせ。", "DisplayActionSheetPage.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -41,6 +44,9 @@ namespace XamarinApp.Pages
                     break;
                 case "MessageBoxPage":
                     Navigation.PushAsync(new MessageBoxPage());
+                    break;
+                case "DisplayActionSheetPage":
+                    Navigation.PushAsync(new DisplayActionSheetPage());
                     break;
                 default:
                     break;
