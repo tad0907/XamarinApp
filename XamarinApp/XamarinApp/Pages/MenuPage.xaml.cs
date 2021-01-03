@@ -11,6 +11,7 @@ using XamarinApp.Pages.CorouselPages;
 using XamarinApp.Pages.DeviceSwitchPages;
 using XamarinApp.Pages.DisplayActionSheetPages;
 using XamarinApp.Pages.MessageBoxPages;
+using XamarinApp.Pages.PageEventPages;
 
 namespace XamarinApp.Pages
 {
@@ -31,6 +32,8 @@ namespace XamarinApp.Pages
                 "選択リストから選べる問い合わせ。", "DisplayActionSheet.png"));
             dtos.Add(new MenuDto("DeviceSwitchPage",
                 "デバイスごとの切り替え。", "DeviceSwitch.png"));
+            dtos.Add(new MenuDto("PageEventPage",
+                "LoadとCloseに代わるもの。", "PageEvent.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -38,7 +41,6 @@ namespace XamarinApp.Pages
         private void MyListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var item = e.Item as MenuDto;
-            //DisplayAlert(item.Title, item.SubTitle, "OK");
 
             switch (item.Title)
             {
@@ -53,6 +55,9 @@ namespace XamarinApp.Pages
                     break;
                 case "DeviceSwitchPage":
                     Navigation.PushAsync(new DeviceSwitchPage());
+                    break;
+                case "PageEventPage":
+                    Navigation.PushAsync(new PageEventPage());
                     break;
                 default:
                     break;

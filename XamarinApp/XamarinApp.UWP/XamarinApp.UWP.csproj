@@ -136,6 +136,7 @@
     <Content Include="Images\Dragon2.png" />
     <Content Include="Mail.png" />
     <AndroidResource Include="MessageBox.png" />
+    <AndroidResource Include="PageEvent.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
