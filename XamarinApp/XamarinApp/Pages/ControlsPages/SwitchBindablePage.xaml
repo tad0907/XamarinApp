@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.ControlsPages.SwitchBindablePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Switch IsToggled="True"
+                    HorizontalOptions="Center"
+                    x:Name="MySwitch"/>
+            <Image Source="NotePC"
+                   HorizontalOptions="Center"
+                   IsVisible=
+                   "{Binding Source = {x:Reference MySwitch}, Path = IsToggled}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
