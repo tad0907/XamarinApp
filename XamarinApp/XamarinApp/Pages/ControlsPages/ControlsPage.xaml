@@ -4,7 +4,8 @@
              xmlns:uc="clr-namespace:XamarinApp.Pages.ControlsPages"
              x:Class="XamarinApp.Pages.ControlsPages.ControlsPage">
     <ContentPage.Content>
-        <ListView x:Name="MyListView">
+        <ListView x:Name="MyListView"
+                  ItemTapped="MyListView_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <uc:ControlPageViewCells/>

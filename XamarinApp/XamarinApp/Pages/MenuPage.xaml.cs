@@ -26,6 +26,8 @@ namespace XamarinApp.Pages
 
             var dtos = new List<MenuDto>();
 
+            dtos.Add(new MenuDto("ControlsPage",
+                "コントロールの一覧。", "NotePC.png"));
             dtos.Add(new MenuDto("CarouselMainPage",
                 "左右にスワイプしてページを移動する。", "NotePC.png"));
             dtos.Add(new MenuDto("MessageBoxPage",
@@ -38,8 +40,6 @@ namespace XamarinApp.Pages
                 "LoadとCloseに代わるもの。", "NotePC.png"));
             dtos.Add(new MenuDto("NoBuckButtonPage",
                 "ナビゲーションの戻るボタンを消す。", "NotePC.png"));
-            dtos.Add(new MenuDto("ControlsPage",
-                "コントロールの一覧。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }

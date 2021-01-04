@@ -19,10 +19,24 @@ namespace XamarinApp.Pages.ControlsPages
 
             var dtos = new List<MenuDto>();
 
-            dtos.Add(new MenuDto("AAAA",
-                "BBBBBBBB", "NotePC.png"));
+            dtos.Add(new MenuDto("SwitchPage",
+                "Switchの使い方。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
+        }
+
+        private void MyListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var item = e.Item as MenuDto;
+
+            switch (item.Title)
+            {
+                case "SwitchPage":
+                    Navigation.PushAsync(new SwitchPage());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
