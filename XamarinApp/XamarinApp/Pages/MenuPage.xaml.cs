@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinApp.Objects;
+using XamarinApp.Pages.ControlsPages;
 using XamarinApp.Pages.CorouselPages;
 using XamarinApp.Pages.DeviceSwitchPages;
 using XamarinApp.Pages.DisplayActionSheetPages;
@@ -37,6 +38,8 @@ namespace XamarinApp.Pages
                 "LoadとCloseに代わるもの。", "NotePC.png"));
             dtos.Add(new MenuDto("NoBuckButtonPage",
                 "ナビゲーションの戻るボタンを消す。", "NotePC.png"));
+            dtos.Add(new MenuDto("ControlsPage",
+                "コントロールの一覧。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -64,6 +67,9 @@ namespace XamarinApp.Pages
                     break;
                 case "NoBuckButtonPage":
                     Navigation.PushAsync(new NoBuckButtonPage());
+                    break;
+                case "ControlsPage":
+                    Navigation.PushAsync(new ControlsPage());
                     break;
                 default:
                     break;
