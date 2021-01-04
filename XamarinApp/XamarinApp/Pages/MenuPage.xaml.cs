@@ -11,6 +11,7 @@ using XamarinApp.Pages.CorouselPages;
 using XamarinApp.Pages.DeviceSwitchPages;
 using XamarinApp.Pages.DisplayActionSheetPages;
 using XamarinApp.Pages.MessageBoxPages;
+using XamarinApp.Pages.NoBuckButtonPages;
 using XamarinApp.Pages.PageEventPages;
 
 namespace XamarinApp.Pages
@@ -25,15 +26,17 @@ namespace XamarinApp.Pages
             var dtos = new List<MenuDto>();
 
             dtos.Add(new MenuDto("CarouselMainPage",
-                "左右にスワイプしてページを移動する。", "Carousel.png"));
+                "左右にスワイプしてページを移動する。", "NotePC.png"));
             dtos.Add(new MenuDto("MessageBoxPage",
-                "メッセージを表示する。", "MessageBox.png"));
+                "メッセージを表示する。", "NotePC.png"));
             dtos.Add(new MenuDto("DisplayActionSheetPage",
-                "選択リストから選べる問い合わせ。", "DisplayActionSheet.png"));
+                "選択リストから選べる問い合わせ。", "NotePC.png"));
             dtos.Add(new MenuDto("DeviceSwitchPage",
-                "デバイスごとの切り替え。", "DeviceSwitch.png"));
+                "デバイスごとの切り替え。", "NotePC.png"));
             dtos.Add(new MenuDto("PageEventPage",
-                "LoadとCloseに代わるもの。", "PageEvent.png"));
+                "LoadとCloseに代わるもの。", "NotePC.png"));
+            dtos.Add(new MenuDto("NoBuckButtonPage",
+                "ナビゲーションの戻るボタンを消す。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -58,6 +61,9 @@ namespace XamarinApp.Pages
                     break;
                 case "PageEventPage":
                     Navigation.PushAsync(new PageEventPage());
+                    break;
+                case "NoBuckButtonPage":
+                    Navigation.PushAsync(new NoBuckButtonPage());
                     break;
                 default:
                     break;
