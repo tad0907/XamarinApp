@@ -25,6 +25,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "Switchの使い方＋バインディング。", "NotePC.png"));
             dtos.Add(new MenuDto("SliderPage",
                 "Sliderの使い方。", "NotePC.png"));
+            dtos.Add(new MenuDto("StepperPage",
+                "Stepperの使い方。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -43,6 +45,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "SliderPage":
                     Navigation.PushAsync(new SliderPage());
+                    break;
+                case "StepperPage":
+                    Navigation.PushAsync(new StepperPage());
                     break;
                 default:
                     break;
