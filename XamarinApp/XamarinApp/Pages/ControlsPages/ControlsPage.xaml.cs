@@ -31,6 +31,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "Entryの使い方。", "NotePC.png"));
             dtos.Add(new MenuDto("EditorPage",
                 "Editorの使い方。", "NotePC.png"));
+            dtos.Add(new MenuDto("PickerPage",
+                "Pickerはコンボボックスのような感じ。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -58,6 +60,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "EditorPage":
                     Navigation.PushAsync(new EditorPage());
+                    break;
+                case "PickerPage":
+                    Navigation.PushAsync(new PickerPage());
                     break;
                 default:
                     break;
