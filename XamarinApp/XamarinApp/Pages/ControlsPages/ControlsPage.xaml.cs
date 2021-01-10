@@ -39,6 +39,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "DateTimePickerの使い方。", "NotePC.png"));
             dtos.Add(new MenuDto("SearchBarPage",
                 "SearchBarの使い方。", "NotePC.png"));
+            dtos.Add(new MenuDto("ToolbarItemPage",
+                "ToolbarItemの使い方。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -78,6 +80,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "SearchBarPage":
                     Navigation.PushAsync(new SearchBarPage());
+                    break;
+                case "ToolbarItemPage":
+                    Navigation.PushAsync(new ToolbarItemPage());
                     break;
                 default:
                     break;
