@@ -35,6 +35,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "Pickerはコンボボックスのような感じ。", "NotePC.png"));
             dtos.Add(new MenuDto("PickerBindablePage",
                 "PickerIDで識別などのためのバインディング。", "NotePC.png"));
+            dtos.Add(new MenuDto("DateTimePickerPage",
+                "DateTimePickerの使い方。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -68,6 +70,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "PickerBindablePage":
                     Navigation.PushAsync(new PickerBindablePage());
+                    break;
+                case "DateTimePickerPage":
+                    Navigation.PushAsync(new DateTimePickerPage());
                     break;
                 default:
                     break;
