@@ -45,6 +45,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "TableViewの使い方。", "NotePC.png"));
             dtos.Add(new MenuDto("ActivityIndicatorPage",
                 "処理中にくるくる。。", "NotePC.png"));
+            dtos.Add(new MenuDto("PullToRefreshPage",
+                "PullToRefreshの使い方。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -93,6 +95,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "ActivityIndicatorPage":
                     Navigation.PushAsync(new ActivityIndicatorPage());
+                    break;
+                case "PullToRefreshPage":
+                    Navigation.PushAsync(new PullToRefreshPage());
                     break;
                 default:
                     break;
