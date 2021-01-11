@@ -43,6 +43,8 @@ namespace XamarinApp.Pages.ControlsPages
                 "ToolbarItemの使い方。", "NotePC.png"));
             dtos.Add(new MenuDto("TableViewPage",
                 "TableViewの使い方。", "NotePC.png"));
+            dtos.Add(new MenuDto("ActivityIndicatorPage",
+                "処理中にくるくる。。", "NotePC.png"));
 
             MyListView.ItemsSource = dtos;
         }
@@ -88,6 +90,9 @@ namespace XamarinApp.Pages.ControlsPages
                     break;
                 case "TableViewPage":
                     Navigation.PushAsync(new TableViewPage());
+                    break;
+                case "ActivityIndicatorPage":
+                    Navigation.PushAsync(new ActivityIndicatorPage());
                     break;
                 default:
                     break;
